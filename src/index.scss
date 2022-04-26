@@ -1,0 +1,32 @@
+.todo {
+	display: flex;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 750px;
+	height: 530px;
+	transform: translate(-50%, -50%);
+	box-shadow: 1px 2px 20px #f3f3f3;
+	border: 1px solid #F1F1F1;
+	border-radius: 10px;
+	font-size: 14px;
+
+	&_sidebar {
+		background-color: #F4F6F8;
+		width: 160px; //200px
+		height: calc(100% - 120px);
+		border-right: 1px solid #F1F1F1;
+		padding: 60px 20px;
+		border-radius: 10px 4px 4px 10px;
+	}
+
+}
+
+.todo_tasks {
+	flex: 1;
+	padding: 60px;
+}
+
+
+
+

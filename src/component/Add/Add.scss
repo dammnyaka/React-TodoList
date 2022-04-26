@@ -1,0 +1,106 @@
+.list {
+  &_add-button {
+    path {
+      stroke: #868686;
+    }
+    span {
+      color: #767676;
+      letter-spacing: 0.15px;
+    }
+    
+    &:hover {
+      path {
+        stroke: #000000;
+      }
+      span {
+        color: #000000;
+      }
+    }
+  }
+}
+
+.add-list {
+  &_form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+
+    width: calc(235px - 36px);
+    height: calc(150px - 30px);
+    padding: 15px 18px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+    }
+    .badge {
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+
+      &.active {
+        box-sizing: border-box;
+        border: 2px solid #525252;
+      }
+
+    }
+  }
+
+  &_form-close {
+    position: absolute;
+    right: -7px;
+    top: -7px;
+    cursor: pointer;
+  }
+}
+
+
+
+.field {
+	background: #FFFFFF;
+	border: 1px solid #EFEFEF;
+	box-sizing: border-box;
+	border-radius: 4px;
+	// width: 200px;
+	// height: 32px;
+  width: 100%;
+	padding: 8px 12px;
+  margin-bottom: 13px;
+
+  &::placeholder {
+    color: #C7C7C7;
+    letter-spacing: 0.15px;
+    opacity: 1;
+    
+  }
+  &:focus {
+    color: #000000;
+    outline-color: #e9e8e8;
+  }
+}
+
+
+.button {
+  margin-top: 13px;
+  width: 100%;
+  padding: 10px;
+  color: #FFFFFF;
+  text-align: center;
+  letter-spacing: 0.15px;
+  background: #4DD599;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background: darken(#4DD599, 5%);
+  }
+  &:active {
+    background: darken(#4DD599, 10%);
+  }
+
+}
