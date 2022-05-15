@@ -14,6 +14,7 @@ function App() {
   
   const [lists, setLists] = useState(null);
   const [colors, setColors] = useState(null);
+  const [activeItem, setActiveItem] = useState(null);
 
   useEffect(() => {
     axios.get('http://localhost:3001/lists?_expand=color&_embed=tasks').then(({ data }) => {
@@ -26,6 +27,20 @@ function App() {
       const newList = [...lists,obj];
       setLists(newList);
   };
+  
+  const onEditListTitle = (id,title) => {
+      const newList = lists.map(item => {
+        if(item.id === id) {
+          item.name = title
+        }
+        return item;
+      });
+      setLists(newList);
+  } 
+
+
+
+
   return (<div className="todo">
     <div className="todo_sidebar">
       <List 
@@ -47,13 +62,19 @@ function App() {
             const newLists =  lists.filter(item => item.id !== list);
             setLists(newLists);
           }}
+          onClickItem={item => {setActiveItem(item);}}
+          activeItem={activeItem}
           isRemovable
         />
       ) : ('Загрузка...')}  
       <AddButtonList onAdd={onAddList} colors={colors}/>
     </div>
     <div className="todo_tasks">
-      {lists && <Tasks list={lists[1]}/>}
+      {lists && activeItem && 
+      <Tasks 
+        list={activeItem} 
+        onEdit={onEditListTitle}
+      />}
     </div>
   </div>
   );

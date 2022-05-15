@@ -19,17 +19,22 @@
       "name": "kdfk",
       "colorId": 3,
       "id": 4
+    },
+    {
+      "name": "dscdscs",
+      "colorId": 7,
+      "id": 5
     }
   ],
   "tasks": [
     {
-      "id":1,
+      "id": 1,
       "listId": 2,
       "text": "изучить JS",
       "completed": false
     },
     {
-      "id":2,
+      "id": 2,
       "listId": 2,
       "text": "adsfa JS",
       "completed": true
