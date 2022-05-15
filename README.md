@@ -12,3 +12,11 @@ Open http://localhost:3000
 ### `npm run fake-json`
 
 Open http://localhost:3001
+
+
+
+Stack:
+
+ReactJS (useState, useEffect)
+Axios
+classnames
